@@ -20,7 +20,7 @@ df = pd.read_csv('./Top3QBelgiumGP2021.csv')
 df.head()
 
 
-driver = st.selectbox('Pick driver', pd.unique(df['Driver']))
+driver = st.selectbox('Pick driver', ['VER', 'PER', 'HAM', 'NOR', 'OCO', 'STR', 'GAS', 'VET', 'RUS', 'ALO', 'BOT', 'LAT', 'RIC', 'SAI', 'MSC', 'LEC', 'TSU', 'GIO', 'MAZ', 'RAI'])
 dataDriver = df.loc[df['Driver'] == driver]
 
 lap = st.slider("Choose lap", 1, 30)
