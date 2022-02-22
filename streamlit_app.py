@@ -16,14 +16,14 @@ df = pd.read_csv('./Top3QBelgiumGP2021.csv')
 df.head()
 
 
-driver = st.selectbox('Pick driver', ['VER', 'RUS', 'HAM'])
+driver = st.selectbox('Pick driver', ['VER','HAM','RUS'])
 dataDriver = df.loc[df['Driver'] == driver]
 
 maxLap = int(dataDriver['Lap'].max())
 lap = st.slider("Choose lap", 1, maxLap)
 dataLap = dataDriver.loc[dataDriver['Lap'] == lap]
 
-color_chan = "Speed"
+color_chan = st.selectbox('Select color channel', ['RPM','Speed','nGear','Throttle','Brake','DRS'])
 
 plotX = dataLap['X']
 plotY = dataLap['Y']
