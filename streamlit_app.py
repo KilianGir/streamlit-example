@@ -16,7 +16,7 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
-df = pd.read_csv('./Data/Top3QBelgiumGP2021.csv')
+df = pd.read_csv('./Top3QBelgiumGP2021.csv')
 df.head()
 
 driver = st.selectbox('Pick driver', pd.unique(df['Driver']))
