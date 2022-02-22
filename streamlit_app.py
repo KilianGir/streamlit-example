@@ -19,10 +19,11 @@ In the meantime, below is an example of what you can do with just a few lines of
 df = pd.read_csv('./Top3QBelgiumGP2021.csv')
 df.head()
 
+
 driver = st.selectbox('Pick driver', pd.unique(df['Driver']))
 dataDriver = df.loc[df['Driver'] == driver]
 
-lap = st.slider("Chose lap", 1, pd.max(dataDriver['Lap'])
+lap = st.slider("Choose lap", 1, 30)
 dataLap = dataDriver.loc[dataDriver['Lap'] == lap]
 
 color_chan = "Speed"
