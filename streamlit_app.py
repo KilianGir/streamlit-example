@@ -24,7 +24,7 @@ df.head()
 driver = st.selectbox('Pick driver', ['VER', 'RUS', 'HAM'])
 dataDriver = df.loc[df['Driver'] == driver]
 
-maxLap = dataDriver['Lap'].max()
+maxLap = int(dataDriver['Lap'].max())
 lap = st.slider("Choose lap", 1, maxLap)
 dataLap = dataDriver.loc[dataDriver['Lap'] == lap]
 
